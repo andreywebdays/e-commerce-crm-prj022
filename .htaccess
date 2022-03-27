@@ -1,0 +1,15 @@
+php_flag magic_quotes_gpc Off
+
+AddDefaultCharset utf-8
+
+# directive sets the list of resources to look for, when the client requests an index of the directory by specifying a / at the end of the directory name
+DirectoryIndex index.php
+
+RewriteEngine on
+
+# if it is not a file then go to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+# if it is not a folder then go to index.php
+# RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*) index.php
