@@ -1,3 +1,5 @@
+## THIS CODE SETS THE ONLY ACCESS POINT FOR OUR WEBSITE
+
 php_flag magic_quotes_gpc Off
 
 AddDefaultCharset utf-8
@@ -13,3 +15,5 @@ RewriteCond %{REQUEST_FILENAME} !-f
 # RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^(.*) index.php
+
+##
