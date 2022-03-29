@@ -5,7 +5,7 @@
 define('VG_ACCESS', true);
 
 // Telling browser in which coding the content should be viewed
-header('Content-Type:text/html:charset=utf-8');
+// header('Content-Type:text/html:charset=utf-8');
 
 // Start session on server side which will be running untill the browser is opened
 session_start();
@@ -15,3 +15,14 @@ require_once 'config.php';
 
 // Internal settings store fundamental settings like routes to the templates, security, etc.
 require_once 'core/base/settings/internal_settings.php';
+
+
+function load1($class_name){
+    $class_name = str_replace('\\', '/', $class_name);
+    include $class_name.'.php';
+};
+
+spl_autoload_register('load1');
+
+
+(new \n1\A());

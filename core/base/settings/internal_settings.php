@@ -11,7 +11,7 @@ defined('VG_ACCESS') or die('Access denied');
 const TEMPLATE = 'templates/default/';
 
 // Location of the admin panel template
-const ADMIN_TEMPLATES = 'core/admin/views';
+const ADMIN_TEMPLATE = 'core/admin/views';
 
 // SAFETY/SECURITY CONSTANTS:
 
@@ -54,3 +54,6 @@ const USER_CSS_JS = [
     'styles' => [],
     'scripts' => []
 ];
+
+$a = 1;
+$b = 2;
