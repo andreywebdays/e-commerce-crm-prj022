@@ -16,13 +16,13 @@ require_once 'config.php';
 // Internal settings store fundamental settings like routes to the templates, security, etc.
 require_once 'core/base/settings/internal_settings.php';
 
+use core\base\controllers\RouteController;
+use core\base\exceptions\RouteException;
 
-function load1($class_name){
-    $class_name = str_replace('\\', '/', $class_name);
-    include $class_name.'.php';
-};
-
-spl_autoload_register('load1');
-
-
-(new \n1\A());
+try{
+    
+    RouteController::getInstance()->route();
+    
+}catch(RouteException $e){
+    exit($e->getMessage());
+}
