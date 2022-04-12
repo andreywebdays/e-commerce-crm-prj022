@@ -2,13 +2,15 @@
 
 namespace core\base\controllers;
 
+use core\base\settings\Settings;
+
+use core\base\settings\ShopSettings;
+
 class RouteController{
     static private $_instance;
     public $hair = 'Blonde';
 
-    private function __clone(){
-        
-    }
+    private function __clone(){}
 
     // Singleton pattern
     // We use the singleton pattern in order to restrict the number of instances that can be created from a resource consuming class to only one
@@ -26,6 +28,8 @@ class RouteController{
     }
 
     private function __construct(){
-        
+        $s = Settings::getInstance('routes');
+        $s1 = ShopSettings::getInstance('routes');
+        exit();
     }
 }

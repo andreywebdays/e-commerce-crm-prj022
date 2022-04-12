@@ -5,7 +5,7 @@
 define('VG_ACCESS', true);
 
 // Telling browser in which coding the content should be viewed
-// header('Content-Type:text/html:charset=utf-8');
+header('Content-Type:text/html;charset=utf-8');
 
 // Start session on server side which will be running untill the browser is opened
 session_start();
@@ -21,7 +21,8 @@ use core\base\exceptions\RouteException;
 
 try{
     
-    RouteController::getInstance()->route();
+    // RouteController::getInstance()->route();
+    RouteController::getInstance();
     
 }catch(RouteException $e){
     exit($e->getMessage());
